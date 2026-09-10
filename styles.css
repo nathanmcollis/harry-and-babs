@@ -1,0 +1,176 @@
+/* ==========================================================
+   BABS + HENRY — STARTER SITE
+   The variables below are the easiest place to make changes.
+   ========================================================== */
+
+:root {
+  --pink: #ee65a9;
+  --site-max-width: 428px;
+  --hero-ratio-width: 428;
+  --hero-ratio-height: 660;
+  --cake-width: 100%;
+  --cake-left: -2%;
+  --cake-bottom: 0%;
+  --couple-width: 72%;
+  --couple-left: 14%;
+  --couple-top: 2.5%;
+  --gap-after-cake: 5.5%;
+  --title-width: 100%;
+  --details-width: 96%;
+  --rsvp-width: 23%;
+}
+
+@font-face {
+  font-family: "Duality";
+  src: url("fonts/Duality-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--pink); }
+body {
+  margin: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--pink);
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+
+.site {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--site-max-width));
+  min-height: 100vh;
+  margin-inline: auto;
+  overflow: hidden;
+  background: var(--pink);
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--hero-ratio-width) / var(--hero-ratio-height);
+}
+
+.cake {
+  position: absolute;
+  z-index: 1;
+  width: var(--cake-width);
+  max-width: none;
+  left: var(--cake-left);
+  bottom: var(--cake-bottom);
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.couple {
+  position: absolute;
+  z-index: 2;
+  width: var(--couple-width);
+  max-width: none;
+  left: var(--couple-left);
+  top: var(--couple-top);
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.invitation {
+  position: relative;
+  padding-top: var(--gap-after-cake);
+  padding-bottom: max(28px, env(safe-area-inset-bottom));
+  text-align: center;
+}
+
+.invite-title {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.event-details {
+  width: var(--details-width);
+  font-family: "Duality", serif;
+  margin: 18px auto 0;
+}
+
+.event-details p {
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.08;
+}
+
+.date {
+  white-space: nowrap;
+  font-size: clamp(20px, 6.4vw, 30px);
+  letter-spacing: -0.025em;
+}
+
+.location {
+  margin-top: 8px !important;
+  white-space: nowrap;
+  font-size: clamp(14px, 4.65vw, 20px);
+  letter-spacing: -0.025em;
+}
+
+.rsvp-link {
+  display: block;
+  width: var(--rsvp-width);
+  margin: 18px auto 0;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.rsvp-button {
+  width: 100%;
+  height: auto;
+  transition: transform 100ms ease;
+}
+
+.rsvp-link:hover .rsvp-button { transform: scale(1.025); }
+.rsvp-link:active .rsvp-button { transform: scale(0.985); }
+
+.snow-layer {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.snowflake {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: var(--flake-size);
+  height: var(--flake-size);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, var(--flake-opacity));
+  transform: translate3d(var(--start-x), -20px, 0);
+  animation: fall var(--fall-duration) linear var(--fall-delay) infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translate3d(calc(var(--start-x) + var(--drift)), calc(100vh + 30px), 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .snow-layer { display: none; }
+  .rsvp-button { transition: none; }
+}
+
+.site-credit {
+  font-family: Arial, sans-serif;
+  font-size: 0.5rem;
+  text-align: center;
+  margin: 2rem 0 1.25rem;
+}
