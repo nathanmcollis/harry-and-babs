@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ee65a9">
+  <title>Babs + Henry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="snow-layer" id="snow" aria-hidden="true"></div>
+
+  <main class="site">
+    <section class="hero" aria-label="Babs and Henry on their wedding cake">
+      <img class="cake" src="assets/cakecolour2.jpg" alt="Green wedding cake with white icing and cherries">
+      <img class="couple" src="assets/harry-babs.gif" alt="Babs and Henry">
+    </section>
+
+    <section class="invitation">
+      <img class="invite-title" src="assets/title-transparent.png" alt="Babs and Henry invite you to their wedding">
+
+      <div class="event-details">Invite you to their wedding
+        <p class="date">Sunday 17 January 2027</p>
+        <p class="location">Hora dancing 8pm Alma Park East Oval</p>
+        <p class="location">↓ push the buttons ↓</p>
+      </div>
+
+      <nav class="button-row" aria-label="Wedding information">
+        <button class="image-button music-button" id="music-toggle" type="button" aria-pressed="false" aria-label="Turn music on">
+          <img id="music-icon" src="assets/button-off.gif" alt="Music off">
+        </button>
+
+        <button class="image-button" id="dress-button" type="button" aria-label="Open dress code">
+          <img src="assets/clothes.gif" alt="Dress code">
+        </button>
+
+        <button class="image-button gift-button" id="gift-button" type="button" aria-label="Open gift information">
+          <img src="assets/gift.gif" alt="Gifts">
+        </button>
+
+        <a class="image-button rsvp-link" href="https://withjoy.com/babs-and-harry/rsvp" aria-label="RSVP">
+          <img src="assets/RSVP-final.gif" alt="RSVP">
+        </a>
+      </nav>
+
+      <p class="site-credit">Designed + coded by Nathan Collis</p>
+    </section>
+  </main>
+
+  <dialog class="pixel-dialog" id="dress-dialog" aria-labelledby="dress-title">
+    <button class="dialog-close" type="button" data-close="dress-dialog" aria-label="Close dress code">×</button>
+    <h2 id="dress-title">DRESS CODE</h2>
+    <p>Smart casual or whatever you want</p>
+  
+    <button class="pixel-close-button" type="button" data-close="dress-dialog">CLOSE</button>
+  </dialog>
+
+  <dialog class="pixel-dialog" id="gift-dialog" aria-labelledby="gift-title">
+    <button class="dialog-close" type="button" data-close="gift-dialog" aria-label="Close gift information">×</button>
+    <h2 id="gift-title">A LITTLE GIFT</h2>
+    <p>Your presence is the best present.</p>
+    <p>If you would like to contribute to our next adventure, donations can be made using the details below:</p>
+    <div class="bank-details">
+      <p><strong>Account name:</strong> Babs and Henry</p>
+      <p><strong>BSB:</strong> 000-000</p>
+      <p><strong>Account:</strong> 00000000</p>
+    </div>
+    <button class="pixel-close-button" type="button" data-close="gift-dialog">CLOSE</button>
+  </dialog>
+
+  <audio id="bg-music" loop preload="auto">
+    <source src="assets/Hava-Nagila.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
