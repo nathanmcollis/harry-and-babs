@@ -34,7 +34,8 @@ body {
   font-family: "Pixelta", monospace;
   -webkit-font-smoothing: none;
 }
-button, a { font: inherit; }
+button, a { font: inherit;
+           color: hsl(225, 63%, 32%); }
 button { color: inherit; }
 img { display: block; max-width: 100%; }
 
