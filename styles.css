@@ -35,7 +35,7 @@ body {
   -webkit-font-smoothing: none;
 }
 button, a { font: inherit;
-           color: hsl(225, 63%, 32%); }
+ color: hsl(198, 100%, 88%); }
 button { color: inherit; }
 img { display: block; max-width: 100%; }
 
@@ -207,6 +207,16 @@ img { display: block; max-width: 100%; }
   to { transform: translate3d(calc(var(--start-x) + var(--drift)), calc(100vh + 30px), 0); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .snow-layer, .gift-button img { display: none; }
-  .image-button:active img { transform: none; }
+  .snow-layer {
+    display: none;
+  }
+
+  .gift-button img {
+    animation: none;
+  }
+
+  .image-button:active img {
+    transform: none;
+  }
+
 }
