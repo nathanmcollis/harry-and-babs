@@ -1,78 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#ee65a9">
-  <title>Babs + Henry</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+    }
+  </style>
 </head>
+
 <body>
-  <div class="snow-layer" id="snow" aria-hidden="true"></div>
-
-  <main class="site">
-    <section class="hero" aria-label="Babs and Henry on their wedding cake">
-      <img class="cake" src="assets/cakecolour2.jpg" alt="Green wedding cake with white icing and cherries">
-      <img class="couple" src="assets/harry-babs.gif" alt="Babs and Henry">
-    </section>
-
-    <section class="invitation">
-      <img class="invite-title" src="assets/title-transparent.png" alt="Babs and Henry invite you to their wedding">
-
-      <div class="event-details"> Invite you to their <br> wedding party</p> 
-        <p class="date">Sunday 17 January 2027</p>
-        <p class="location">Hora dancing 8pm Alma Park East Oval</p>
-        <p class="location">House party 8:30pm at our house</p>
-        <p class="location"><a href="https://maps.app.goo.gl/ZEp8rbBcu7xDj2Hr5">3 Queen St, St Kilda East VIC 3182</a></p>
-        <p class="location">↓ push the buttons ↓</p>
-      </div>
-
-      <nav class="button-row" aria-label="Wedding information">
-        <button class="image-button music-button" id="music-toggle" type="button" aria-pressed="false" aria-label="Turn music on">
-          <img id="music-icon" src="assets/button-off.gif" alt="Music off">
-        </button>
-
-        <button class="image-button" id="dress-button" type="button" aria-label="Open dress code">
-          <img src="assets/clothes.gif" alt="Dress code">
-        </button>
-
-
-        </button>
-
-        <a class="image-button rsvp-link" href="https://withjoy.com/babs-and-harry/rsvp" aria-label="RSVP">
-          <img src="assets/RSVP-final.gif" alt="RSVP">
-        </a>
-      </nav>
-
-      <p class="site-credit">Designed + coded by Nathan Collis</p>
-    </section>
-  </main>
-
-  <dialog class="pixel-dialog" id="dress-dialog" aria-labelledby="dress-title">
-    <button class="dialog-close" type="button" data-close="dress-dialog" aria-label="Close dress code">×</button>
-    <h2 id="dress-title">DRESS CODE</h2>
-    <p>Nice, accessories encouraged.</p>
-  
-    <button class="pixel-close-button" type="button" data-close="dress-dialog">CLOSE</button>
-  </dialog>
-
-  <dialog class="pixel-dialog" id="gift-dialog" aria-labelledby="gift-title">
-    <button class="dialog-close" type="button" data-close="gift-dialog" aria-label="Close gift information">×</button>
-    <h2 id="gift-title">A LITTLE GIFT</h2>
-    <p>Your presence is the best present.</p>
-    <p>If you would like to contribute to our next adventure, donations can be made using the details below:</p>
-    <div class="bank-details">
-      <p><strong>Account:</strong> Rapeport and Hughes</p>
-      <p><strong>BSB:</strong> 013017 </p>
-      <p><strong>Account:</strong> 177017414</p>
-    </div>
-    <button class="pixel-close-button" type="button" data-close="gift-dialog">CLOSE</button>
-  </dialog>
-
-  <audio id="bg-music" loop preload="auto">
-    <source src="assets/Hava-Nagila.mp3" type="audio/mpeg">
-  </audio>
-
-  <script src="script.js"></script>
 </body>
 </html>
